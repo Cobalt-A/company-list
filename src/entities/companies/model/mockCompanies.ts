@@ -1,4 +1,6 @@
-export const mockCompanies = [
+import { ICompany } from "./store"
+
+export const mockCompanies: ICompany[] = [
   {
     "id": 1,
     "name": "Южуралзолото ГК",

@@ -1,12 +1,13 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-
+import companiesReducer from '@src/entities/companies'
+ 
 const rootReducer = combineReducers({
-
+  companiesReducer
 });
 
 export const store = configureStore({
   reducer: {
-    //rootReducer,
+    rootReducer,
   },
 });
 

@@ -1,25 +1,40 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { mockCompanies } from "./mockCompanies";
 
 export interface ICompany {
-  id: string
-  name: string
-  address: string
+  id: number;
+  name: string;
+  address: string;
+}
+
+export interface ICurrentCompany extends ICompany {
+  active: boolean;
 }
 
 interface CompaniesStore {
-  companies: ICompany[]
+  companies: ICompany[];
+  currentCompanies: ICurrentCompany[];
+  isCheckedAll: boolean;
 }
 
 const initialState: CompaniesStore = {
-  companies: []
+  companies: mockCompanies,
+  currentCompanies: [],
+  isCheckedAll: false,
 };
 
-export const articleSlice = createSlice({
-  name: "articles",
+export const companiesSlice = createSlice({
+  name: "companies",
   initialState,
   reducers: {
     setCompanies: (state, action: PayloadAction<ICompany[]>) => {
-     state.companies = action.payload
+      state.companies = action.payload;
+    },
+    setCurrentCompanies: (state, action: PayloadAction<ICurrentCompany[]>) => {
+      state.currentCompanies = action.payload;
+    },
+    setIsCheckedAll: (state, action: PayloadAction<boolean>) => {
+      state.isCheckedAll = action.payload;
     },
   },
 });

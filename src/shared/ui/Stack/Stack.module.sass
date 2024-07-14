@@ -1,0 +1,83 @@
+.stack
+  display: flex
+
+  &_direction-column
+    flex-direction: column
+
+  &_direction-row
+    flex-direction: row
+    flex-wrap: wrap
+
+  &_wrap
+    flex-wrap: wrap
+
+  &_no-wrap
+    flex-wrap: nowrap
+
+  &_justify-space-between
+    justify-content: space-between
+
+  &_justify-center
+    justify-content: center
+
+  &_justify-end
+    justify-content: end
+
+  &_align-center
+    align-items: center
+
+  &_align-end
+    align-items: flex-end
+
+  &_align-start
+    align-items: flex-start
+
+  &_gap-5
+    gap: 5px
+
+  &_gap-10
+    gap: 10px
+
+  &_gap-15
+    gap: 15px
+
+  &_gap-20
+    gap: 20px
+
+  &_gap-25
+    gap: 25px
+
+  &_gap-30
+    gap: 30px
+
+  &_gap-40
+    gap: 40px
+
+  &_gap-125
+    gap: 125px
+
+  &_width-full
+    width: 100%
+
+@media (min-width: 768px)
+  .stack
+    &__direction-md-row
+      flex-direction: row
+
+    &_direction-md-column
+      flex-direction: column
+
+    &_gap-md-20
+      gap: 20px
+
+    &_gap-md-25
+      gap: 25px
+
+    &_gap-md-30
+      gap: 30px
+
+    &_gap-md-40
+      gap: 40px
+
+    &_gap-md-125
+      gap: 125px
