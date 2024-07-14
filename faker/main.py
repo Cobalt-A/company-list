@@ -3,8 +3,6 @@ import json
 
 fake = Faker("ru_RU")
 
-print(fake.street_address())
-
 def create_dict(**qwargs):
     d = {k:v for k, v in qwargs.items()}
     return d
